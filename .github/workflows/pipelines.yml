@@ -1,6 +1,6 @@
 name: "Build & Test"
 concurrency: ${{ github.workflow }}
-on:
+on: # rebuild any PRs and main branch changes
   push:
     branches:
       - master
@@ -14,7 +14,7 @@ jobs:
     - run: |
         npm install
         npm run all
-  test: # make sure the action works on a clean machine without building
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
