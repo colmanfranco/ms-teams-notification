@@ -2442,11 +2442,10 @@ module.exports = require("child_process");
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createMessageCard = void 0;
 function createMessageCard(notificationSummary, notificationColor, commit, author, runNum, runId, repoName, sha, repoUrl, timestamp) {
-    const avatar_url = 'https://www.gravatar.com/avatar/05b6d8cc7c662bf81e01b39254f88a48?d=identicon';
+    let avatar_url = 'https://www.gravatar.com/avatar/05b6d8cc7c662bf81e01b39254f88a48?d=identicon';
     if (author && author.avatar_url && author.avatar_url !== '') {
-        const autorAvatarUrl = author.avatar_url;
-    }
-}
+        avatar_url = author.avatar_url;
+      }
     const messageCard = {
         '@type': 'MessageCard',
         '@context': 'https://schema.org/extensions',
