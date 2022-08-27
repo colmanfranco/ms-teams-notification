@@ -4,7 +4,7 @@ import axios from 'axios'
 import moment from 'moment-timezone'
 import {createMessageCard} from './message-card'
 
-const escapeMarkdownTokens = (text: string) =>
+const escapeMarkdownTokens = (text: string) => {
   text
     .replace(/\n\ {1,}/g, '\n ')
     .replace(/\_/g, '\\_')
@@ -13,6 +13,7 @@ const escapeMarkdownTokens = (text: string) =>
     .replace(/#/g, '\\#')
     .replace(/-/g, '\\-')
     .replace(/>/g, '\\>')
+}
 
 async function run(): Promise<void> {
   try {
