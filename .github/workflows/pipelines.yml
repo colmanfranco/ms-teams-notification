@@ -18,28 +18,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: colmanfranco/ms-teams-notification@v1.1
+    - uses: colmanfranco/ms-teams-notification@v1
       with: 
         github-token: ${{ github.token }}
         ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
         notification-summary: Deployment Started 
         notification-color: 17a2b8
         timezone: Europe/Madrid
-    - uses: colmanfranco/ms-teams-notification@v1.1
+    - uses: colmanfranco/ms-teams-notification@v1
       with: 
         github-token: ${{ github.token }}
         ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
         notification-summary: Warning! Something Not Quite Right 
         notification-color: ffc107
         timezone: Europe/Madrid
-    - uses: colmanfranco/ms-teams-notification@v1.1
+    - uses: colmanfranco/ms-teams-notification@v1
       with: 
         github-token: ${{ github.token }}
         ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
         notification-summary: OMG!! Something Exploded
         notification-color: dc3545
         timezone: Europe/Madrid
-    - uses: colmanfranco/ms-teams-notification@v1.1
+    - uses: colmanfranco/ms-teams-notification@v1
       with: 
         github-token: ${{ github.token }}
         ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
