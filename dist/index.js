@@ -2440,8 +2440,8 @@ module.exports = require("child_process");
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-// exports.createMessageCard = void 0;
-module.exports = function createMessageCard(
+exports.createMessageCard = void 0;
+function createMessageCard(
   notificationSummary, 
   notificationColor, 
   commit, 
@@ -2487,6 +2487,7 @@ module.exports = function createMessageCard(
     return messageCard;
 }
 
+exports.createMessageCard = createMessageCard;
 
 /***/ }),
 
