@@ -2440,8 +2440,18 @@ module.exports = require("child_process");
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createMessageCard = void 0;
-function createMessageCard(notificationSummary, notificationColor, commit, author, runNum, runId, repoName, sha, repoUrl, timestamp) {
+// exports.createMessageCard = void 0;
+module.exports = function createMessageCard(
+  notificationSummary, 
+  notificationColor, 
+  commit, 
+  author, 
+  runNum, 
+  runId, 
+  repoName, 
+  sha, 
+  repoUrl, 
+  timestamp) {
     let avatar_url = 'https://www.gravatar.com/avatar/05b6d8cc7c662bf81e01b39254f88a48?d=identicon';
     if (author && author.avatar_url && author.avatar_url !== '') {
         avatar_url = author.avatar_url;
@@ -2476,8 +2486,6 @@ function createMessageCard(notificationSummary, notificationColor, commit, autho
     };
     return messageCard;
 }
-
-module.exports = createMessageCard;
 
 
 /***/ }),
