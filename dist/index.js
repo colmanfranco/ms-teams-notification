@@ -2476,7 +2476,7 @@ function createMessageCard(notificationSummary, notificationColor, commit, autho
     };
     return messageCard;
 }
-exports.createMessageCard = createMessageCard;
+module.exports = {createMessageCard};
 
 
 /***/ }),
