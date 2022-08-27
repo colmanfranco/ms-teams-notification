@@ -1,6 +1,6 @@
 name: "Build & Test"
 concurrency: ${{ github.workflow }}
-on: # rebuild any PRs and main branch changes
+on:
   push:
     branches:
       - master
