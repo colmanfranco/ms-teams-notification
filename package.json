@@ -1,6 +1,6 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
+  "name": "ms-teams-notification",
+  "version": "1.0",
   "private": true,
   "description": "TypeScript template action",
   "main": "lib/main.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/colmanfranco/ms-teams-notification.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "jdcargile",
+  "author": "colmanfranco",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
