@@ -1,4 +1,4 @@
-name: "Build & Test"
+name: "Build, Publish & Test"
 concurrency: ${{ github.workflow }}
 on: # rebuild any PRs and main branch changes
   push:
