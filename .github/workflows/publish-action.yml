@@ -2,7 +2,6 @@ name: "Publish GitHub Action"
 on:
   push:
     branches:
-      - master
       - main
 
 jobs:
