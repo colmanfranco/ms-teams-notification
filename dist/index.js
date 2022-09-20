@@ -2456,7 +2456,7 @@ function createMessageCard(
     if (author && author.avatar_url && author.avatar_url !== '') {
         avatar_url = author.avatar_url;
       }
-    const messageCard = {
+    return {
         '@type': 'MessageCard',
         '@context': 'https://schema.org/extensions',
         summary: notificationSummary,
@@ -2466,7 +2466,7 @@ function createMessageCard(
             {
                 activityTitle: `**CI #${runNum} (commit ${sha.substr(0, 7)})** on [${repoName}](${repoUrl})`,
                 activityImage: avatar_url,
-                activitySubtitle: `by ${commit.data.commit.author.name} [(@${author.login})](${author.html_url}) on ${timestamp}`
+                activitySubtitle: `by ${commit.data.commit.author.name} on ${timestamp}`
             }
         ],
         potentialAction: [
@@ -2484,7 +2484,6 @@ function createMessageCard(
             }
         ]
     };
-    return messageCard;
 }
 
 exports.createMessageCard = createMessageCard;
